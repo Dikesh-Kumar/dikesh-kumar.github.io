@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     statsObserver.observe(statsSection);
   }
 
-  // 7. Clipboard Copy Actions (Email, Phone & Search Queries)
+  // 7. Clipboard Copy Actions (Email & Search Queries)
   const copyEmailBtn = document.getElementById('copy-email-btn');
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
@@ -218,17 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const copyPhoneBtn = document.getElementById('copy-phone-btn');
-  if (copyPhoneBtn) {
-    copyPhoneBtn.addEventListener('click', () => {
-      const phone = copyPhoneBtn.getAttribute('data-phone') || '+916263543807';
-      navigator.clipboard.writeText(phone).then(() => {
-        showToast(`Copied phone number: ${phone}`);
-      }).catch(() => {
-        showToast(`Phone: ${phone}`);
-      });
-    });
-  }
 
   const copyLinkedinQueryBtn = document.getElementById('copy-linkedin-query-btn');
   if (copyLinkedinQueryBtn) {
