@@ -602,25 +602,30 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   font-weight: 500;
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: block;           /* Natural inline text flow so only overflowing words wrap */
   height: 4rem;             /* strictly fixed vertical height to prevent layout shifts */
   overflow: hidden;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.typing-prefix {
+  display: inline;
 }
 
 .typing-text {
   color: var(--accent-cyan);
   font-weight: 700;
-  margin-left: 0.4rem;
+  display: inline;
 }
 
 .cursor {
   display: inline-block;
   width: 2px;
-  height: 1.4rem;
+  height: 1.25rem;
   background-color: var(--accent-emerald);
-  margin-left: 4px;
+  margin-left: 2px;
+  vertical-align: -0.12rem;
   animation: blink 0.8s infinite;
 }
 
@@ -2558,7 +2563,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .typing-container {
-    justify-content: center;
+    text-align: center;
     height: 4.2rem;          /* strictly fixed vertical height */
   }
 
