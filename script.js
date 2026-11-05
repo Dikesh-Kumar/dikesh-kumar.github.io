@@ -179,19 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 stat.textContent = '2024';
               } else if (target === 99) {
                 stat.textContent = '99.9%';
-              } else if (target >= 1000) {
-                stat.textContent = (target / 1000) + 'k+';
               } else {
-                stat.textContent = target + '+';
+                stat.textContent = target.toLocaleString();
               }
               clearInterval(timer);
             } else {
               if (target === 99) {
                 stat.textContent = Math.floor(start) + '%';
-              } else if (target >= 1000) {
-                stat.textContent = Math.floor(start / 1000) + 'k+';
+              } else if (target === 2024) {
+                stat.textContent = Math.floor(start);
               } else {
-                stat.textContent = Math.floor(start) + (target === 2024 ? '' : '+');
+                stat.textContent = Math.floor(start).toLocaleString();
               }
             }
           }, stepTime);
