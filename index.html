@@ -154,7 +154,7 @@
 
           <p class="hero-description">
             <strong>Senior Software Engineer at HfactoR</strong> and <strong>IIT Kharagpur M.Tech Dual Degree</strong> graduate (CGPA: 7.81). 
-            Competitive programmer with <strong>Codeforces Expert (Rating 1705)</strong>, <strong>CodeChef 4â˜… (Rating 1846)</strong>, 
+            Competitive programmer with <strong>Codeforces Expert (Rating 1705)</strong>, <strong>CodeChef 4-Star (Rating 1846)</strong>, 
             and <strong>Meta Hacker Cup 2024 Global Rank 1567</strong>. Former Software Engineer Intern at <strong>GAIL (India) Limited</strong>. 
             Passionate about architecting enterprise SaaS, low-latency microservices, and solving complex algorithmic challenges.
           </p>
@@ -391,43 +391,59 @@
 
             <div class="exp-body">
               <p class="exp-overview">
-                At <strong>HfactoR</strong>, I lead the architecture, design, and scaling of our enterprise SaaS HRMS 
-                and automated payroll computation engine. Serving enterprise clients with heavy concurrent workloads, 
-                my work centers on building sub-second calculation microservices, bulletproof multi-tenant isolation, 
-                and high-reliability cloud data pipelines.
+                At <strong>HfactoR</strong>, I own the design and delivery of the core <strong>Attendance &amp; Workflow Engine</strong>
+                and payroll pipeline — serving enterprise HRMS clients across India. My work spans API architecture,
+                attendance rule engines, payroll integrations, automation pipelines, and cross-team collaboration
+                with Dev, QC, and Product teams.
               </p>
 
-              <h5 class="exp-subhead">Key Responsibilities & Architectural Impact:</h5>
+              <h5 class="exp-subhead">Key Contributions &amp; Architectural Impact:</h5>
               <div class="exp-bullets-grid">
                 <div class="exp-bullet-item">
                   <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
                   <div>
-                    <strong>High-Throughput Payroll Computation Engine:</strong>
-                    <p>Designed core calculation microservices using .NET, C#, and SQL Server handling multi-tier tax deductions, arrears, and batch salary disbursements with 100% mathematical precision.</p>
-                  </div>
-                </div>
-
-                <div class="exp-bullet-item">
-                  <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                  <div>
-                    <strong>Multi-Tenant Architecture & RBAC Security:</strong>
-                    <p>Architected strict tenancy data isolation, JWT authentication, and granular Role-Based Access Control enforcing tenant confidentiality across large corporate workforces.</p>
+                    <strong>Attendance Rule Engine — Full Ownership:</strong>
+                    <p>Built end-to-end attendance calculation covering cycle-based, working-hours, and shift-based logic (Normal, Open, Break shifts); automatic night-shift detection; permission inclusion in status; and next-day regularization blocking rules.</p>
                   </div>
                 </div>
 
                 <div class="exp-bullet-item">
                   <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                   <div>
-                    <strong>Real-Time Ingestion & Geofenced Check-ins:</strong>
-                    <p>Engineered event-driven microservices capturing live biometric punch clocks and mobile geofenced attendance with message queues and automatic anomaly detection.</p>
+                    <strong>Biometric &amp; Punch Integrations:</strong>
+                    <p>Integrated biometric devices, generic engine punch adapters, and timezone-aware punch handling. Built queue-based processing for OD/WFH requests and On-Duty integration with punch-based attendance.</p>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                  <div>
+                    <strong>Automation Pipelines:</strong>
+                    <p>Auto leave deduction, permission handling for late entry / early exit / insufficient hours, automatic leave cancellation, attendance auto-sync for payroll, GoColors LOP rules, and configuration-driven double wages for public holidays.</p>
                   </div>
                 </div>
 
                 <div class="exp-bullet-item">
                   <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
                   <div>
-                    <strong>SQL Query Optimization & Redis Caching:</strong>
-                    <p>Tuned relational schema, composite indexing, and execution plans, reducing peak reporting query latencies by over 50% across high-volume workforce datasets.</p>
+                    <strong>Payroll &amp; LOP Integration:</strong>
+                    <p>Built Loss-of-Pay sync with time card, attendance freeze (new transaction table, freeze-enforced submission), LOP reversals with reports, week-off/holiday LOP inclusion/exclusion, and payroll-blocked guard while sync is in progress.</p>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></div>
+                  <div>
+                    <strong>Overtime, CompOff &amp; Bulk Operations:</strong>
+                    <p>OT-based comp-off with pre-approval, CompOff balance visibility, bulk shift mapping with attendance reprocessing, bulk leave approval, bulk upload for reprocess, and team-level week-off mapping.</p>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                  <div>
+                    <strong>Architecture Migration &amp; Cross-Team Delivery:</strong>
+                    <p>Migrated business logic from stored procedures to the API layer for scalability. Optimised employee calendar and punch attendance APIs. Collaborated daily with Dev, QC, and Product teams to spec, build, and ship features end-to-end.</p>
                   </div>
                 </div>
               </div>
@@ -744,59 +760,77 @@
             </div>
           </article>
 
-          <!-- Project 5: Enterprise Payroll & Tax Engine -->
+          <!-- Project 5: Attendance & Workflow Engine -->
           <article class="project-card glass-panel" data-category="backend fullstack">
             <div class="project-header">
-              <span class="project-category-badge category-comp">HfactoR &bull; Core</span>
-              <span class="project-year">Production</span>
+              <span class="project-category-badge category-comp">HfactoR &bull; Production</span>
+              <span class="project-year">2024 – Present</span>
             </div>
-            <h3 class="project-title">High-Throughput Enterprise Payroll Engine</h3>
+            <h3 class="project-title">Attendance &amp; Workflow Engine</h3>
             <p class="project-summary">
-              Engineered the core payroll computation engine handling complex multi-tier tax structures, statutory deductions, 
-              and batch payouts for tens of thousands of corporate employees.
+              Designed and owned the full attendance calculation engine for an enterprise HRMS — covering
+              shift-based rules, biometric integrations, automation pipelines, payroll sync, and overtime/CompOff workflows
+              used by enterprise clients across India.
             </p>
             <div class="project-details-list">
               <div class="detail-row">
-                <strong>Architecture:</strong> Asynchronous batch processing with transactional ACID rollback guarantees.
+                <strong>Attendance Calculation:</strong> Cycle-based, working-hours, Normal/Open/Break shift logic; auto night-shift; permission inclusion; next-day regularization blocking.
               </div>
               <div class="detail-row">
-                <strong>Stack:</strong> .NET 8, C#, SQL Server, Redis caching, and Azure Cloud infrastructure.
+                <strong>Integrations:</strong> Biometric devices, generic engine punch adapters, timezone-aware punches, queue-based OD/WFH processing, On-Duty &amp; WFH punch integration.
+              </div>
+              <div class="detail-row">
+                <strong>Automation:</strong> Auto leave deduction, auto permission handling (late entry / early exit / insufficient hours), auto leave cancellation, GoColors LOP rules, double wages for public holidays.
+              </div>
+              <div class="detail-row">
+                <strong>Overtime &amp; Bulk:</strong> OT-based CompOff with pre-approval, CompOff balance, bulk shift mapping with reprocessing, bulk leave approval, team-level week-off mapping.
+              </div>
+              <div class="detail-row">
+                <strong>Architecture:</strong> Migrated business logic from stored procedures to API layer; optimised employee calendar &amp; punch APIs; collaborated with Dev, QC, and Product teams.
               </div>
             </div>
             <div class="project-tags">
-              <span class="tag">.NET 8</span>
-              <span class="tag">C#</span>
-              <span class="tag">SQL Server</span>
+              <span class="tag">.NET 8 &bull; C#</span>
+              <span class="tag">SQL Server &bull; T-SQL</span>
+              <span class="tag">Stored Procedures</span>
+              <span class="tag">Message Queues</span>
+              <span class="tag">Biometric APIs</span>
               <span class="tag">Azure</span>
-              <span class="tag">Redis</span>
             </div>
           </article>
 
-          <!-- Project 6: Multi-Tenant HRMS & RBAC Framework -->
-          <article class="project-card glass-panel" data-category="backend">
+          <!-- Project 6: Payroll, LOP & Freeze Engine -->
+          <article class="project-card glass-panel" data-category="backend fullstack">
             <div class="project-header">
-              <span class="project-category-badge category-green">SaaS Security</span>
-              <span class="project-year">Production</span>
+              <span class="project-category-badge category-green">HfactoR &bull; Payroll</span>
+              <span class="project-year">2024 – Present</span>
             </div>
-            <h3 class="project-title">Multi-Tenant Isolation & Granular RBAC Framework</h3>
+            <h3 class="project-title">Payroll, LOP &amp; Attendance Freeze Engine</h3>
             <p class="project-summary">
-              Architected tenancy management ensuring complete logical and operational isolation across client organizations, 
-              coupled with a dynamic Role-Based Access Control authorization system.
+              Built the Loss-of-Pay sync pipeline, attendance freeze system, and payroll submission guards
+              — ensuring accurate payroll processing with configurable LOP rules, reversal reports, and
+              week-off/holiday inclusion/exclusion logic for enterprise clients.
             </p>
             <div class="project-details-list">
               <div class="detail-row">
-                <strong>Security:</strong> JWT session rotation, scope-level permission enforcement, and immutable audit logs.
+                <strong>LOP Sync:</strong> Loss-of-Pay attendance sync with time card; week-off/holiday LOP inclusion/exclusion; payroll blocked while sync in progress.
               </div>
               <div class="detail-row">
-                <strong>Scalability:</strong> Dynamic tenant schema routing with centralized connection pooling.
+                <strong>Attendance Freeze:</strong> New transaction table; freeze enforced before payroll submission; config for pending leave/regularization on frozen attendance; attendance sync inside freeze.
+              </div>
+              <div class="detail-row">
+                <strong>LOP Reversals:</strong> Revoke LOP, LOP reversal report, EABD vs Time Card payable days report, time card checks in daily attendance sync.
+              </div>
+              <div class="detail-row">
+                <strong>Payroll Submission:</strong> Enhanced payroll submission process with auto-sync; payroll submission blocked during active sync.
               </div>
             </div>
             <div class="project-tags">
-              <span class="tag">Multi-Tenancy</span>
-              <span class="tag">RBAC</span>
-              <span class="tag">C#</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Microservices</span>
+              <span class="tag">.NET 8 &bull; C#</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">T-SQL &bull; SPs</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Redis</span>
             </div>
           </article>
         </div>
