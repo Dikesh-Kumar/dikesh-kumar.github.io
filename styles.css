@@ -603,19 +603,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  min-height: 2.2rem;      /* fixed height — page never shifts */
-  overflow: hidden;
+  flex-wrap: wrap;
+  min-height: 2.2rem;
 }
 
 .typing-text {
   color: var(--accent-cyan);
   font-weight: 700;
   margin-left: 0.4rem;
-  white-space: nowrap;     /* text stays on one line, no reflow */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 70vw;         /* clips on small screens instead of wrapping */
 }
 
 .cursor {
@@ -2562,6 +2557,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .typing-container {
     justify-content: center;
+    min-height: 4rem;   /* tall enough for 2 wrapped lines on mobile */
   }
 
   .hero-pills {
@@ -2637,6 +2633,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .typing-container {
     font-size: 1.15rem;
+    min-height: 3.6rem;  /* 2 lines at 1.15rem */
   }
 
   .stats-grid {
