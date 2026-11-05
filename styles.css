@@ -597,14 +597,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .typing-container {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
+  line-height: 1.4;
   color: var(--text-secondary);
   font-weight: 500;
   margin-bottom: 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  min-height: 2.2rem;
+  height: 4rem;             /* strictly fixed vertical height to prevent layout shifts */
+  overflow: hidden;
 }
 
 .typing-text {
@@ -2557,7 +2559,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .typing-container {
     justify-content: center;
-    min-height: 4rem;   /* tall enough for 2 wrapped lines on mobile */
+    height: 4.2rem;          /* strictly fixed vertical height */
   }
 
   .hero-pills {
@@ -2633,7 +2635,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .typing-container {
     font-size: 1.15rem;
-    min-height: 3.6rem;  /* 2 lines at 1.15rem */
+    line-height: 1.4;
+    height: 3.8rem;          /* strictly fixed vertical height */
   }
 
   .stats-grid {
@@ -2698,6 +2701,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .hero-title {
     font-size: 1.95rem;
+  }
+
+  .typing-container {
+    font-size: 1rem;
+    line-height: 1.35;
+    height: 3.5rem;          /* strictly fixed vertical height */
   }
 
   .projects-grid {
