@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dikesh-kumar.netlify.app/sitemap.xml
+Sitemap: https://dikeshkumar.is-a.dev/sitemap.xml
