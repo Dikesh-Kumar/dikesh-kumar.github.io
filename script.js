@@ -91,8 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let charIndex = 0;
     let isDeleting = false;
     let typingSpeed = 85;
+    let typingTimer = null;
+    let isVisible = true;
+
+    // Pause animation when hero scrolls out of view — no layout shifts off-screen
+    const typingObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isVisible = entry.isIntersecting;
+        if (isVisible && !typingTimer) {
+          typingTimer = setTimeout(typeLoop, typingSpeed);
+        }
+      });
+    }, { threshold: 0.1 });
+    typingObserver.observe(typingElement);
 
     function typeLoop() {
+      typingTimer = null;
+      if (!isVisible) return; // paused while off-screen
+
       const currentRole = roles[roleIndex];
 
       if (isDeleting) {
@@ -114,10 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         typingSpeed = 350; // Pause before typing new phrase
       }
 
-      setTimeout(typeLoop, typingSpeed);
+      typingTimer = setTimeout(typeLoop, typingSpeed);
     }
 
-    typeLoop();
+    typingTimer = setTimeout(typeLoop, typingSpeed);
   }
 
   // 5. Project Category Filtering

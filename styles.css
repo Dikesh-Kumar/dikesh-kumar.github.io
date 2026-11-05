@@ -603,13 +603,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  min-height: 2.2rem;      /* fixed height — page never shifts */
+  overflow: hidden;
 }
 
 .typing-text {
   color: var(--accent-cyan);
   font-weight: 700;
   margin-left: 0.4rem;
+  white-space: nowrap;     /* text stays on one line, no reflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70vw;         /* clips on small screens instead of wrapping */
 }
 
 .cursor {
