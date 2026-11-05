@@ -767,6 +767,22 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
 }
 
+.avatar-inner.photo-avatar {
+  overflow: hidden;
+  padding: 0;
+  border-width: 3px;
+  border-color: #3b82f6;
+}
+
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 50%;
+  display: block;
+}
+
 .avatar-initials {
   font-family: var(--font-heading);
   font-size: 2.75rem;
@@ -1098,6 +1114,165 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-emerald {
   color: var(--accent-emerald);
+}
+
+.about-pills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
+.tag-featured {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.tag-featured svg {
+  color: var(--accent-emerald);
+}
+
+.tag-featured:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.about-photo-col {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-showcase-card {
+  padding: 0.65rem;
+  border-radius: var(--radius-xl);
+  border-color: rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.photo-showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.6);
+}
+
+.showcase-img-container {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.campus-portrait-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-showcase-card:hover .campus-portrait-img {
+  transform: scale(1.03);
+}
+
+.showcase-overlay-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1.25rem 1rem;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(10, 15, 29, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.badge-text-primary {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.badge-text-sub {
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Convocation Milestone Photo Card */
+.convocation-card {
+  margin-top: 1.5rem;
+  padding: 0.65rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-medium);
+  overflow: hidden;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.convocation-card:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+}
+
+.convocation-img-wrap {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.convocation-photo {
+  width: 100%;
+  max-height: 290px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.convocation-card:hover .convocation-photo {
+  transform: scale(1.02);
+}
+
+.convocation-ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 0.9rem;
+  background: rgba(10, 15, 29, 0.88);
+  backdrop-filter: blur(8px);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ribbon-icon {
+  font-size: 1rem;
+}
+
+.convocation-meta {
+  padding: 0.6rem 0.5rem 0.25rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* --------------------------------------------------------------------------
@@ -2488,6 +2663,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .achievements-grid {
     grid-template-columns: 1fr;
+  }
+
+  .campus-portrait-img {
+    height: 380px;
   }
 }
 
